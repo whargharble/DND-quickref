@@ -1,0 +1,70 @@
+/* Mobile-first, readable UI with parchment vibes */
+:root{
+  --bg:#f8f1e5;
+  --ink:#201a13;
+  --card:#ffffff;
+  --accent:#d7c4a4;
+  --muted:#6b5f52;
+  --radius:14px;
+  --shadow:0 2px 8px rgba(0,0,0,.08);
+  --font: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.4;
+}
+.app-header{
+  padding:16px;
+  background:linear-gradient(180deg,#fbf6ee, #f3e7d3);
+  position:sticky; top:0; z-index:10;
+  border-bottom:1px solid #e8dcc7;
+}
+h1{margin:0 0 8px 0; font-size:20px; font-weight:800;}
+
+.snapshot{
+  display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+  font-size:14px;
+}
+.snapshot .pill{padding:6px 10px; background:#fff; border:1px solid #e9dfcd; border-radius:999px; box-shadow:var(--shadow)}
+.hearts{display:flex; gap:4px; align-items:center}
+.heart{width:14px; height:14px; border-radius:3px; background:#e2574c}
+.heart.empty{background:#e9dfcd}
+
+.tabs{
+  display:flex; overflow:auto; gap:8px; padding:8px 12px; border-bottom:1px solid #e8dcc7; background:#f7efdf;
+}
+.tab{
+  flex:1; white-space:nowrap;
+  background:#fff; border:1px solid #e9dfcd; border-radius:999px; padding:10px 12px;
+  font-size:14px;
+}
+.tab.active{background:#201a13; color:#fff}
+
+main{padding:12px; padding-bottom:64px;}
+.panel{margin-top:8px;}
+.card-list{list-style:none; padding:0; margin:0; display:grid; gap:10px;}
+.card{
+  background:var(--card); border:1px solid #eee1cc; border-radius:var(--radius); padding:14px;
+  box-shadow:var(--shadow);
+}
+.card h3{margin:0 0 6px 0; font-size:17px}
+.card .meta{color:var(--muted); font-size:13px}
+.card .desc{margin-top:6px; font-size:14px}
+
+.personality{display:grid; gap:10px}
+.badge{
+  display:inline-block; padding:6px 10px; border-radius:999px; background:#fff; border:1px solid #e9dfcd; box-shadow:var(--shadow);
+  font-size:13px
+}
+
+.app-footer{
+  position:sticky; bottom:0; padding:10px; display:flex; justify-content:center; background:linear-gradient(0deg,#fbf6ee,#f3e7d3);
+  border-top:1px solid #e8dcc7;
+}
+#install-btn{padding:10px 16px; border-radius:10px; border:1px solid #e9dfcd; background:#fff; }

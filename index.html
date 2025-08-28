@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quick Reference</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Quick Reference">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Quick Reference</h1>
+    <div id="char-snapshot" class="snapshot" aria-live="polite"></div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button class="tab active" role="tab" aria-selected="true" aria-controls="panel-spells" id="tab-spells">✨ Spells & Abilities</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="panel-conditions" id="tab-conditions">⚠️ Conditions</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="panel-actions" id="tab-actions">🎲 Actions & Movement</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="panel-personality" id="tab-personality">📝 Personality</button>
+  </nav>
+
+  <main>
+    <section id="panel-spells" class="panel active" role="tabpanel" aria-labelledby="tab-spells">
+      <ul id="spells-list" class="card-list"></ul>
+    </section>
+
+    <section id="panel-conditions" class="panel" role="tabpanel" aria-labelledby="tab-conditions" hidden>
+      <ul id="conditions-list" class="card-list"></ul>
+    </section>
+
+    <section id="panel-actions" class="panel" role="tabpanel" aria-labelledby="tab-actions" hidden>
+      <ul id="actions-list" class="card-list"></ul>
+    </section>
+
+    <section id="panel-personality" class="panel" role="tabpanel" aria-labelledby="tab-personality" hidden>
+      <div id="personality" class="personality"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <button id="install-btn" hidden>Install App</button>
+  </footer>
+
+  <script src="data/sample_data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
